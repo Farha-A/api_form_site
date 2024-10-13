@@ -1,9 +1,9 @@
 from flask import Flask, jsonify
-from routes.brrp import brrp_bp
+from routes.users import users_bp
 
 app = Flask(__name__)
 
-app.register_blueprint(brrp_bp, url_prefix="/brrp")
+app.register_blueprint(users_bp, url_prefix="/users")
 
 @app.errorhandler(404)
 def not_found(e):
